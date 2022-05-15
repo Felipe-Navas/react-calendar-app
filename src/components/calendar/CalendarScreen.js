@@ -7,6 +7,8 @@ import { messages } from '../../helpers/calendar-messages.es'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { CalendarEvent } from './CalendarEvent'
 import { CalendarModal } from './CalendarModal'
+import { useDispatch } from 'react-redux'
+import { uiOpenModal } from '../../actions/ui'
 
 moment.locale('es')
 const localizer = momentLocalizer(moment)
@@ -16,7 +18,7 @@ const myEventsList = [
     title: 'All Day Event',
     allDay: true,
     start: moment().toDate(),
-    end: moment().add(6, 'hours').toDate(),
+    end: moment().add(2, 'hours').toDate(),
     bgcolor: '#958AE9',
     notes: 'Hacer algo',
     user: {
@@ -27,11 +29,15 @@ const myEventsList = [
 ]
 
 export const CalendarScreen = () => {
+  const dispatch = useDispatch()
+
   const [lastView, setLastView] = useState(
     localStorage.getItem('lastView') || 'month'
   )
 
-  const onDoubleClick = (e) => {}
+  const onDoubleClick = (e) => {
+    dispatch(uiOpenModal())
+  }
 
   const onSelectEvent = (e) => {}
 
