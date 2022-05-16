@@ -7,29 +7,17 @@ import { messages } from '../../helpers/calendar-messages.es'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { CalendarEvent } from './CalendarEvent'
 import { CalendarModal } from './CalendarModal'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { uiOpenModal } from '../../actions/ui'
+import { eventSetActive } from '../../actions/events'
+import { AddNewFab } from '../ui/AddNewFab'
 
 moment.locale('es')
 const localizer = momentLocalizer(moment)
 
-const myEventsList = [
-  {
-    title: 'All Day Event',
-    allDay: true,
-    start: moment().toDate(),
-    end: moment().add(2, 'hours').toDate(),
-    bgcolor: '#958AE9',
-    notes: 'Hacer algo',
-    user: {
-      _id: 'asd123',
-      name: 'Felipe',
-    },
-  },
-]
-
 export const CalendarScreen = () => {
   const dispatch = useDispatch()
+  const myEventsList = useSelector((state) => state.calendar.events)
 
   const [lastView, setLastView] = useState(
     localStorage.getItem('lastView') || 'month'
@@ -39,7 +27,9 @@ export const CalendarScreen = () => {
     dispatch(uiOpenModal())
   }
 
-  const onSelectEvent = (e) => {}
+  const onSelectEvent = (e) => {
+    dispatch(eventSetActive(e))
+  }
 
   const onViewChange = (e) => {
     setLastView(e)
@@ -78,6 +68,8 @@ export const CalendarScreen = () => {
           event: CalendarEvent,
         }}
       />
+
+      <AddNewFab />
       <CalendarModal />
     </div>
   )
