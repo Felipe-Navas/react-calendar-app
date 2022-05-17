@@ -9,15 +9,16 @@ import { CalendarEvent } from './CalendarEvent'
 import { CalendarModal } from './CalendarModal'
 import { useDispatch, useSelector } from 'react-redux'
 import { uiOpenModal } from '../../actions/ui'
-import { eventSetActive } from '../../actions/events'
+import { eventClearActiveEvent, eventSetActive } from '../../actions/events'
 import { AddNewFab } from '../ui/AddNewFab'
+import { DeleteEventFab } from '../ui/DeleteEventFab'
 
 moment.locale('es')
 const localizer = momentLocalizer(moment)
 
 export const CalendarScreen = () => {
   const dispatch = useDispatch()
-  const myEventsList = useSelector((state) => state.calendar.events)
+  const { events, activeEvent } = useSelector((state) => state.calendar)
 
   const [lastView, setLastView] = useState(
     localStorage.getItem('lastView') || 'month'
@@ -34,6 +35,10 @@ export const CalendarScreen = () => {
   const onViewChange = (e) => {
     setLastView(e)
     localStorage.setItem('lastView', e)
+  }
+
+  const onSelectSlot = (e) => {
+    dispatch(eventClearActiveEvent())
   }
 
   const eventStyleGetter = (event, start, end, isSelected) => {
@@ -55,7 +60,7 @@ export const CalendarScreen = () => {
       <Navbar />
       <Calendar
         localizer={localizer}
-        events={myEventsList}
+        events={events}
         startAccessor="start"
         endAccessor="end"
         messages={messages}
@@ -64,11 +69,14 @@ export const CalendarScreen = () => {
         onSelectEvent={onSelectEvent}
         onView={onViewChange}
         view={lastView}
+        onSelectSlot={onSelectSlot}
+        selectable={true}
         components={{
           event: CalendarEvent,
         }}
       />
 
+      {activeEvent && <DeleteEventFab />}
       <AddNewFab />
       <CalendarModal />
     </div>
