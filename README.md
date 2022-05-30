@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This README would normally document whatever steps are necessary to get your application up and running.
 
-## Available Scripts
+### What is this repository for?
 
-In the project directory, you can run:
+- Quick summary
+  - A Node react calendar app
+- Version: 1.0
+- [Author](https://www.linkedin.com/in/felipenavaslederhos)
 
-### `npm start`
+### How do I get set up?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Summary of set up
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - `yarn`
+  - `npm install`
 
-### `npm test`
+- How to run the app?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - `yarn start`
+  - `npm start`
 
-### `npm run build`
+- How to run the tests?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - `yarn test`
+  - `npm test`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Dependencies
+    - "@testing-library/jest-dom": "^5.16.4",
+    - "@testing-library/react": "^13.2.0",
+    - "@testing-library/user-event": "^13.5.0",
+    - "moment": "^2.29.3",
+    - "react": "^18.1.0",
+    - "react-big-calendar": "^0.40.1",
+    - "react-datetime-picker": "^3.5.0",
+    - "react-dom": "^18.1.0",
+    - "react-modal": "^3.15.1",
+    - "react-redux": "^8.0.1",
+    - "react-router-dom": "^6.3.0",
+    - "react-scripts": "5.0.1",
+    - "redux": "^4.2.0",
+    - "redux-thunk": "^2.4.1",
+    - "sweetalert2": "^11.4.14",
+    - "web-vitals": "^2.1.4"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Dev dependencies
+    - "@cfaester/enzyme-adapter-react-18": "^0.5.1",
+    - "enzyme-to-json": "^3.6.2",
+    - "redux-mock-store": "^1.5.4"
 
-### `npm run eject`
+### Contribution guidelines
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Writing tests
+- Code review
+- Other guidelines
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Who do I talk to?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Repo owner or admin
+- Other community or team contact
