@@ -102,8 +102,6 @@ export const CalendarModal = () => {
       return setTitleValid(false)
     }
 
-    // TODO: save in the database
-
     if (activeEvent) {
       dispatch(eventStartUpdate(formValues))
     } else {
@@ -123,6 +121,7 @@ export const CalendarModal = () => {
       closeTimeoutMS={200}
       className="modal"
       overlayClassName="modal-fondo"
+      ariaHideApp={!process.env.NODE_ENV === 'test'}
     >
       <h1> {activeEvent ? 'Editar evento' : 'Nuevo evento'} </h1>
       <hr />
