@@ -55,7 +55,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
       <span
         className="rbc-toolbar-label"
       >
-        mayo 2022
+        abril 2024
       </span>
       <span
         className="rbc-btn-group"
@@ -189,22 +189,22 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
           className="rbc-row-bg"
         >
           <div
-            className="rbc-day-bg rbc-off-range-bg"
+            className="rbc-day-bg"
           />
           <div
-            className="rbc-day-bg rbc-off-range-bg"
+            className="rbc-day-bg"
           />
           <div
-            className="rbc-day-bg rbc-off-range-bg"
+            className="rbc-day-bg rbc-today"
           />
           <div
-            className="rbc-day-bg rbc-off-range-bg"
+            className="rbc-day-bg"
           />
           <div
-            className="rbc-day-bg rbc-off-range-bg"
+            className="rbc-day-bg"
           />
           <div
-            className="rbc-day-bg rbc-off-range-bg"
+            className="rbc-day-bg"
           />
           <div
             className="rbc-day-bg"
@@ -218,92 +218,8 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             className="rbc-row "
           >
             <div
-              className="rbc-date-cell rbc-off-range"
-              key="header_0"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                25
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell rbc-off-range"
-              key="header_1"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                26
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell rbc-off-range"
-              key="header_2"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                27
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell rbc-off-range"
-              key="header_3"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                28
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell rbc-off-range"
-              key="header_4"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                29
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell rbc-off-range"
-              key="header_5"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                30
-              </button>
-            </div>
-            <div
               className="rbc-date-cell"
-              key="header_6"
+              key="header_0"
               role="cell"
             >
               <button
@@ -315,48 +231,9 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 01
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rbc-month-row"
-        role="rowgroup"
-      >
-        <div
-          className="rbc-row-bg"
-        >
-          <div
-            className="rbc-day-bg"
-          />
-          <div
-            className="rbc-day-bg"
-          />
-          <div
-            className="rbc-day-bg"
-          />
-          <div
-            className="rbc-day-bg"
-          />
-          <div
-            className="rbc-day-bg"
-          />
-          <div
-            className="rbc-day-bg"
-          />
-          <div
-            className="rbc-day-bg"
-          />
-        </div>
-        <div
-          className="rbc-row-content"
-          role="row"
-        >
-          <div
-            className="rbc-row "
-          >
             <div
               className="rbc-date-cell"
-              key="header_0"
+              key="header_1"
               role="cell"
             >
               <button
@@ -369,8 +246,8 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
               </button>
             </div>
             <div
-              className="rbc-date-cell"
-              key="header_1"
+              className="rbc-date-cell rbc-now rbc-current"
+              key="header_2"
               role="cell"
             >
               <button
@@ -384,7 +261,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_2"
+              key="header_3"
               role="cell"
             >
               <button
@@ -398,7 +275,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_3"
+              key="header_4"
               role="cell"
             >
               <button
@@ -412,7 +289,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_4"
+              key="header_5"
               role="cell"
             >
               <button
@@ -426,20 +303,6 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_5"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                07
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell"
               key="header_6"
               role="cell"
             >
@@ -449,7 +312,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 role="cell"
                 type="button"
               >
-                08
+                07
               </button>
             </div>
           </div>
@@ -494,6 +357,20 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             <div
               className="rbc-date-cell"
               key="header_0"
+              role="cell"
+            >
+              <button
+                className="rbc-button-link"
+                onClick={[Function]}
+                role="cell"
+                type="button"
+              >
+                08
+              </button>
+            </div>
+            <div
+              className="rbc-date-cell"
+              key="header_1"
               role="cell"
             >
               <button
@@ -507,7 +384,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_1"
+              key="header_2"
               role="cell"
             >
               <button
@@ -521,7 +398,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_2"
+              key="header_3"
               role="cell"
             >
               <button
@@ -535,7 +412,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_3"
+              key="header_4"
               role="cell"
             >
               <button
@@ -549,7 +426,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_4"
+              key="header_5"
               role="cell"
             >
               <button
@@ -563,20 +440,6 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_5"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                14
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell"
               key="header_6"
               role="cell"
             >
@@ -586,7 +449,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 role="cell"
                 type="button"
               >
-                15
+                14
               </button>
             </div>
           </div>
@@ -631,6 +494,20 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             <div
               className="rbc-date-cell"
               key="header_0"
+              role="cell"
+            >
+              <button
+                className="rbc-button-link"
+                onClick={[Function]}
+                role="cell"
+                type="button"
+              >
+                15
+              </button>
+            </div>
+            <div
+              className="rbc-date-cell"
+              key="header_1"
               role="cell"
             >
               <button
@@ -644,7 +521,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_1"
+              key="header_2"
               role="cell"
             >
               <button
@@ -658,7 +535,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_2"
+              key="header_3"
               role="cell"
             >
               <button
@@ -672,7 +549,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_3"
+              key="header_4"
               role="cell"
             >
               <button
@@ -686,7 +563,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_4"
+              key="header_5"
               role="cell"
             >
               <button
@@ -700,20 +577,6 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_5"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                21
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell"
               key="header_6"
               role="cell"
             >
@@ -723,7 +586,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 role="cell"
                 type="button"
               >
-                22
+                21
               </button>
             </div>
           </div>
@@ -768,6 +631,20 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             <div
               className="rbc-date-cell"
               key="header_0"
+              role="cell"
+            >
+              <button
+                className="rbc-button-link"
+                onClick={[Function]}
+                role="cell"
+                type="button"
+              >
+                22
+              </button>
+            </div>
+            <div
+              className="rbc-date-cell"
+              key="header_1"
               role="cell"
             >
               <button
@@ -781,7 +658,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_1"
+              key="header_2"
               role="cell"
             >
               <button
@@ -795,7 +672,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_2"
+              key="header_3"
               role="cell"
             >
               <button
@@ -809,7 +686,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_3"
+              key="header_4"
               role="cell"
             >
               <button
@@ -823,7 +700,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_4"
+              key="header_5"
               role="cell"
             >
               <button
@@ -837,20 +714,6 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             </div>
             <div
               className="rbc-date-cell"
-              key="header_5"
-              role="cell"
-            >
-              <button
-                className="rbc-button-link"
-                onClick={[Function]}
-                role="cell"
-                type="button"
-              >
-                28
-              </button>
-            </div>
-            <div
-              className="rbc-date-cell"
               key="header_6"
               role="cell"
             >
@@ -860,7 +723,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 role="cell"
                 type="button"
               >
-                29
+                28
               </button>
             </div>
           </div>
@@ -874,7 +737,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
           className="rbc-row-bg"
         >
           <div
-            className="rbc-day-bg rbc-today"
+            className="rbc-day-bg"
           />
           <div
             className="rbc-day-bg"
@@ -903,7 +766,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
             className="rbc-row "
           >
             <div
-              className="rbc-date-cell rbc-now rbc-current"
+              className="rbc-date-cell"
               key="header_0"
               role="cell"
             >
@@ -913,7 +776,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 role="cell"
                 type="button"
               >
-                30
+                29
               </button>
             </div>
             <div
@@ -927,7 +790,7 @@ exports[`Testing the CalendarScreen component should render correctly 1`] = `
                 role="cell"
                 type="button"
               >
-                31
+                30
               </button>
             </div>
             <div
