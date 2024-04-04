@@ -1,61 +1,69 @@
-# README
+# React Calendar App
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A React App to handle events within a calendar
 
-### What is this repository for?
+## Description
 
-- Quick summary
-  - A Node react calendar app
-- Version: 1.0
-- [Author](https://www.linkedin.com/in/felipenavaslederhos)
+In this app I use a backend server with different endpoints to handle events of a calendar.
 
-### How do I get set up?
+## Getting Started
 
-- Summary of set up
+### Dependencies
 
-  - `yarn`
-  - `npm install`
+- `npm`
+- `node`
+- Backend Server: Here is an example that I use in this repository: https://github.com/Felipe-Navas/node-calendar-app
 
-- How to run the app?
+### Installing
 
-  - `yarn start`
-  - `npm start`
+- Clone the repository and install dependencies:
 
-- How to run the tests?
+```
+git clone https://github.com/Felipe-Navas/react-calendar-app.git && cd react-calendar-app && npm install
+```
 
-  - `yarn test`
-  - `npm test`
+- Configure your `.env` file (depending of your environment: development, production, test) in the root of the project and configure the `REACT_APP_API_URL` variable with the URL of the Backend Server
 
-- Dependencies
-    - "@testing-library/jest-dom": "^5.16.4",
-    - "@testing-library/react": "^13.2.0",
-    - "@testing-library/user-event": "^13.5.0",
-    - "moment": "^2.29.3",
-    - "react": "^18.1.0",
-    - "react-big-calendar": "^0.40.1",
-    - "react-datetime-picker": "^3.5.0",
-    - "react-dom": "^18.1.0",
-    - "react-modal": "^3.15.1",
-    - "react-redux": "^8.0.1",
-    - "react-router-dom": "^6.3.0",
-    - "react-scripts": "5.0.1",
-    - "redux": "^4.2.0",
-    - "redux-thunk": "^2.4.1",
-    - "sweetalert2": "^11.4.14",
-    - "web-vitals": "^2.1.4"
+### Executing program
 
-- Dev dependencies
-    - "@cfaester/enzyme-adapter-react-18": "^0.5.1",
-    - "enzyme-to-json": "^3.6.2",
-    - "redux-mock-store": "^1.5.4"
+```
+npm start
+```
 
-### Contribution guidelines
+Preview of the principal page to login:
 
-- Writing tests
-- Code review
-- Other guidelines
+<img width="350" src="assets/LoginPreview.png" alt="Preview of the principal page to login" />
 
-### Who do I talk to?
+Preview of the screen of calendar:
 
-- Repo owner or admin
-- Other community or team contact
+<img width="350" src="assets/CalendarPreview.png" alt="Preview of the screen of calendar" />
+
+Preview of the screen of new event:
+
+<img width="350" src="assets/NewEventPreview.png" alt="Preview of the screen of new event" />
+
+### Running tests
+
+```
+npm test
+```
+
+Preview of the console running the tests:
+
+<img width="350" src="assets/TestsPreview.png" alt="Preview of the console running the tests" />
+
+## Authors
+
+- [Felipe Navas](https://www.linkedin.com/in/felipenavaslederhos) - [Email](mailto:felipenavas.itec@gmail.com?subject=[GitHub]%20react-calendar-app)
+
+## Contributing
+
+1. Fork it (<https://github.com/Felipe-Navas/react-calendar-app/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the [MIT License] - see the LICENSE file for details
