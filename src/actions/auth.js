@@ -18,7 +18,7 @@ export const startLogin = (email, password) => {
       dispatch(
         login({
           uid: body.uid,
-          name: body.name,
+          name: body.name
         })
       )
     } else {
@@ -43,7 +43,7 @@ export const startRegister = (email, name, password) => {
       dispatch(
         login({
           uid: body.uid,
-          name: body.name,
+          name: body.name
         })
       )
     } else {
@@ -64,7 +64,7 @@ export const startChecking = () => {
       dispatch(
         login({
           uid: body.uid,
-          name: body.name,
+          name: body.name
         })
       )
     } else {
@@ -75,11 +75,11 @@ export const startChecking = () => {
 
 const login = (user) => ({
   type: types.authLogin,
-  payload: user,
+  payload: user
 })
 
 const checkingFinish = () => ({
-  type: types.authCheckingFinish,
+  type: types.authCheckingFinish
 })
 
 export const startLogout = () => {
@@ -93,5 +93,5 @@ export const startLogout = () => {
 const logout = () => ({ type: types.authLogout })
 
 const eventLogout = () => ({
-  type: types.eventLogout,
+  type: types.eventLogout
 })

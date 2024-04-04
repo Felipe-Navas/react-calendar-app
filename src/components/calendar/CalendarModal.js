@@ -8,7 +8,7 @@ import { uiCloseModal } from '../../actions/ui'
 import {
   eventClearActiveEvent,
   eventStartAddNew,
-  eventStartUpdate,
+  eventStartUpdate
 } from '../../actions/events'
 
 const customStyles = {
@@ -18,8 +18,8 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
+    transform: 'translate(-50%, -50%)'
+  }
 }
 
 if (process.env.NODE_ENV !== 'test') {
@@ -33,7 +33,7 @@ const initEvent = {
   title: '',
   notes: '',
   start: now.toDate(),
-  end: nowPlus1.toDate(),
+  end: nowPlus1.toDate()
 }
 
 export const CalendarModal = () => {
@@ -61,7 +61,7 @@ export const CalendarModal = () => {
   const handleInputChange = ({ target }) => {
     setFormValues({
       ...formValues,
-      [target.name]: target.value,
+      [target.name]: target.value
     })
   }
 
@@ -75,7 +75,7 @@ export const CalendarModal = () => {
     setDateStart(e)
     setFormValues({
       ...formValues,
-      start: e,
+      start: e
     })
   }
 
@@ -83,7 +83,7 @@ export const CalendarModal = () => {
     setDateEnd(e)
     setFormValues({
       ...formValues,
-      end: e,
+      end: e
     })
   }
 

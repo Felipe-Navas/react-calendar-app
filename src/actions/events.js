@@ -15,7 +15,7 @@ export const eventStartAddNew = (event) => {
         event.id = body.event.id
         event.user = {
           _id: uid,
-          name: name,
+          name
         }
         console.log(event)
         dispatch(eventAddNew(event))
@@ -29,16 +29,16 @@ export const eventStartAddNew = (event) => {
 
 const eventAddNew = (event) => ({
   type: types.eventAddNew,
-  payload: event,
+  payload: event
 })
 
 export const eventSetActive = (event) => ({
   type: types.eventSetActive,
-  payload: event,
+  payload: event
 })
 
 export const eventClearActiveEvent = () => ({
-  type: types.eventClearActiveEvent,
+  type: types.eventClearActiveEvent
 })
 
 export const eventStartUpdate = (event) => {
@@ -61,7 +61,7 @@ export const eventStartUpdate = (event) => {
 
 const eventUpdated = (event) => ({
   type: types.eventUpdated,
-  payload: event,
+  payload: event
 })
 
 export const eventStartDelete = () => {
@@ -84,7 +84,7 @@ export const eventStartDelete = () => {
 }
 
 const eventDeleted = () => ({
-  type: types.eventDeleted,
+  type: types.eventDeleted
 })
 
 export const eventStartLoading = () => {
@@ -103,5 +103,5 @@ export const eventStartLoading = () => {
 
 const eventLoaded = (events) => ({
   type: types.eventLoaded,
-  payload: events,
+  payload: events
 })
