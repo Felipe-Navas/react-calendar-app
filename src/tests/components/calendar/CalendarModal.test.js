@@ -11,18 +11,18 @@ import { CalendarModal } from '../../../components/calendar/CalendarModal'
 import {
   eventClearActiveEvent,
   eventStartAddNew,
-  eventStartUpdate,
+  eventStartUpdate
 } from '../../../actions/events'
 import Swal from 'sweetalert2'
 
 jest.mock('sweetalert2', () => ({
-  fire: jest.fn(),
+  fire: jest.fn()
 }))
 
 jest.mock('../../../actions/events', () => ({
   eventStartUpdate: jest.fn(),
   eventClearActiveEvent: jest.fn(),
-  eventStartAddNew: jest.fn(),
+  eventStartAddNew: jest.fn()
 }))
 
 const middlewares = [thunk]
@@ -38,16 +38,16 @@ const initState = {
       title: 'test',
       notes: 'test-notes',
       start: now.toDate(),
-      end: nowPlus1.toDate(),
-    },
+      end: nowPlus1.toDate()
+    }
   },
   auth: {
     uid: '123',
-    name: 'test',
+    name: 'test'
   },
   ui: {
-    modalOpen: true,
-  },
+    modalOpen: true
+  }
 }
 const store = mockStore(initState)
 store.dispatch = jest.fn()
@@ -69,7 +69,7 @@ describe('Testing the CalendarModal component', () => {
 
   test('should call the update action and close modal', () => {
     wrapper.find('form').simulate('submit', {
-      preventDefault: () => {},
+      preventDefault: () => {}
     })
 
     expect(eventStartUpdate).toHaveBeenCalledWith(
@@ -80,7 +80,7 @@ describe('Testing the CalendarModal component', () => {
 
   test('should show the error when the title is missed', () => {
     wrapper.find('form').simulate('submit', {
-      preventDefault: () => {},
+      preventDefault: () => {}
     })
 
     expect(wrapper.find('input[name="title"]').hasClass('is-invalid')).toBe(
@@ -92,15 +92,15 @@ describe('Testing the CalendarModal component', () => {
     const initState = {
       calendar: {
         events: [],
-        activeEvent: null,
+        activeEvent: null
       },
       auth: {
         uid: '123',
-        name: 'test',
+        name: 'test'
       },
       ui: {
-        modalOpen: true,
-      },
+        modalOpen: true
+      }
     }
     const store = mockStore(initState)
     store.dispatch = jest.fn()
@@ -114,19 +114,19 @@ describe('Testing the CalendarModal component', () => {
     wrapper.find('input[name="title"]').simulate('change', {
       target: {
         name: 'title',
-        value: 'test title',
-      },
+        value: 'test title'
+      }
     })
 
     wrapper.find('form').simulate('submit', {
-      preventDefault: () => {},
+      preventDefault: () => {}
     })
 
     expect(eventStartAddNew).toHaveBeenCalledWith({
       end: expect.any(Date),
       start: expect.any(Date),
       title: 'test title',
-      notes: '',
+      notes: ''
     })
 
     expect(eventClearActiveEvent).toHaveBeenCalled()
@@ -136,8 +136,8 @@ describe('Testing the CalendarModal component', () => {
     wrapper.find('input[name="title"]').simulate('change', {
       target: {
         name: 'title',
-        value: 'test title',
-      },
+        value: 'test title'
+      }
     })
 
     const today = new Date()
@@ -147,7 +147,7 @@ describe('Testing the CalendarModal component', () => {
     })
 
     wrapper.find('form').simulate('submit', {
-      preventDefault: () => {},
+      preventDefault: () => {}
     })
 
     expect(Swal.fire).toHaveBeenCalledWith(
