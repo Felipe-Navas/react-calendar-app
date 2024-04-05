@@ -2,7 +2,7 @@ import { uiCloseModal, uiOpenModal } from '../../actions/ui'
 import { uiReducer } from '../../reducers/uiReducer'
 
 const initState = {
-  modalOpen: false,
+  modalOpen: false
 }
 
 describe('Testing the uiReducer', () => {

@@ -10,7 +10,7 @@ import { DeleteEventFab } from '../../../components/ui/DeleteEventFab'
 import { eventStartDelete } from '../../../actions/events'
 
 jest.mock('../../../actions/events', () => ({
-  eventStartDelete: jest.fn(),
+  eventStartDelete: jest.fn()
 }))
 
 const middlewares = [thunk]

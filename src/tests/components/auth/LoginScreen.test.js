@@ -11,11 +11,11 @@ import Swal from 'sweetalert2'
 
 jest.mock('../../../actions/auth', () => ({
   startLogin: jest.fn(),
-  startRegister: jest.fn(),
+  startRegister: jest.fn()
 }))
 
 jest.mock('sweetalert2', () => ({
-  fire: jest.fn(),
+  fire: jest.fn()
 }))
 
 const middlewares = [thunk]
@@ -42,18 +42,18 @@ describe('Testing the LoginScreen component', () => {
 
   test('should call the login dispatch', () => {
     wrapper.find('input[name="lEmail"]').simulate('change', {
-      target: { name: 'lEmail', value: 'juan@gmail.com' },
+      target: { name: 'lEmail', value: 'juan@gmail.com' }
     })
 
     wrapper.find('input[name="lPassword"]').simulate('change', {
-      target: { name: 'lPassword', value: '123456' },
+      target: { name: 'lPassword', value: '123456' }
     })
 
     wrapper
       .find('form')
       .at(0)
       .simulate('submit', {
-        preventDefault: () => {},
+        preventDefault: () => {}
       })
 
     expect(startLogin).toHaveBeenCalledWith('juan@gmail.com', '123456')
@@ -61,18 +61,18 @@ describe('Testing the LoginScreen component', () => {
 
   test('should not call the register when different passwords', () => {
     wrapper.find('input[name="rPassword1"]').simulate('change', {
-      target: { name: 'rPassword1', value: '123456' },
+      target: { name: 'rPassword1', value: '123456' }
     })
 
     wrapper.find('input[name="rPassword2"]').simulate('change', {
-      target: { name: 'rPassword2', value: 'different-password' },
+      target: { name: 'rPassword2', value: 'different-password' }
     })
 
     wrapper
       .find('form')
       .at(1)
       .simulate('submit', {
-        preventDefault: () => {},
+        preventDefault: () => {}
       })
 
     expect(startRegister).not.toHaveBeenCalled()
@@ -85,18 +85,18 @@ describe('Testing the LoginScreen component', () => {
 
   test('should register correctrly', () => {
     wrapper.find('input[name="rPassword1"]').simulate('change', {
-      target: { name: 'rPassword1', value: '123456' },
+      target: { name: 'rPassword1', value: '123456' }
     })
 
     wrapper.find('input[name="rPassword2"]').simulate('change', {
-      target: { name: 'rPassword2', value: '123456' },
+      target: { name: 'rPassword2', value: '123456' }
     })
 
     wrapper
       .find('form')
       .at(1)
       .simulate('submit', {
-        preventDefault: () => {},
+        preventDefault: () => {}
       })
 
     expect(Swal.fire).not.toHaveBeenCalled()

@@ -3,7 +3,7 @@ import { types } from '../../types/types'
 
 const initState = {
   events: [],
-  activeEvent: null,
+  activeEvent: null
 }
 
 describe('Testing the calendarReducer', () => {
@@ -17,16 +17,16 @@ describe('Testing the calendarReducer', () => {
       type: types.eventSetActive,
       payload: {
         id: 1,
-        title: 'test',
-      },
+        title: 'test'
+      }
     }
     const state = calendarReducer(initState, action)
     expect(state).toEqual({
       ...initState,
       activeEvent: {
         id: 1,
-        title: 'test',
-      },
+        title: 'test'
+      }
     })
   })
 
@@ -35,8 +35,8 @@ describe('Testing the calendarReducer', () => {
       type: types.eventAddNew,
       payload: {
         id: 1,
-        title: 'test',
-      },
+        title: 'test'
+      }
     }
     const state = calendarReducer(initState, action)
     expect(state).toEqual({
@@ -45,20 +45,20 @@ describe('Testing the calendarReducer', () => {
       events: [
         {
           id: 1,
-          title: 'test',
-        },
-      ],
+          title: 'test'
+        }
+      ]
     })
   })
 
   test('should clear the active event', () => {
     const action = {
-      type: types.eventClearActiveEvent,
+      type: types.eventClearActiveEvent
     }
     const state = calendarReducer(initState, action)
     expect(state).toEqual({
       ...initState,
-      activeEvent: null,
+      activeEvent: null
     })
   })
 
@@ -68,16 +68,16 @@ describe('Testing the calendarReducer', () => {
       events: [
         {
           id: 1,
-          title: 'test-old',
-        },
-      ],
+          title: 'test-old'
+        }
+      ]
     }
     const action = {
       type: types.eventUpdated,
       payload: {
         id: 1,
-        title: 'test-new',
-      },
+        title: 'test-new'
+      }
     }
     const state = calendarReducer(initState1, action)
     expect(state).toEqual({
@@ -85,9 +85,9 @@ describe('Testing the calendarReducer', () => {
       events: [
         {
           id: 1,
-          title: 'test-new',
-        },
-      ],
+          title: 'test-new'
+        }
+      ]
     })
   })
 
@@ -97,9 +97,9 @@ describe('Testing the calendarReducer', () => {
       payload: [
         {
           id: 1,
-          title: 'test',
-        },
-      ],
+          title: 'test'
+        }
+      ]
     }
     const state = calendarReducer(initState, action)
     expect(state).toEqual({
@@ -107,9 +107,9 @@ describe('Testing the calendarReducer', () => {
       events: [
         {
           id: 1,
-          title: 'test',
-        },
-      ],
+          title: 'test'
+        }
+      ]
     })
   })
 
@@ -119,27 +119,27 @@ describe('Testing the calendarReducer', () => {
       events: [
         {
           id: 1,
-          title: 'test',
-        },
+          title: 'test'
+        }
       ],
       activeEvent: {
         id: 1,
-        title: 'test',
-      },
+        title: 'test'
+      }
     }
     const action = {
-      type: types.eventDeleted,
+      type: types.eventDeleted
     }
     const state = calendarReducer(initState1, action)
     expect(state).toEqual({
       ...initState,
-      events: [],
+      events: []
     })
   })
 
   test('should logout', () => {
     const action = {
-      type: types.eventLogout,
+      type: types.eventLogout
     }
     const state = calendarReducer(initState, action)
     expect(state).toEqual(initState)

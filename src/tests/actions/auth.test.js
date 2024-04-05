@@ -7,7 +7,7 @@ import { types } from '../../types/types'
 import * as fetchModule from '../../helpers/fetch'
 
 jest.mock('sweetalert2', () => ({
-  fire: jest.fn(),
+  fire: jest.fn()
 }))
 
 const middlewares = [thunk]
@@ -30,7 +30,7 @@ describe('Testing auth actions', () => {
 
     expect(actions[0]).toEqual({
       type: types.authLogin,
-      payload: { uid: expect.any(String), name: expect.any(String) },
+      payload: { uid: expect.any(String), name: expect.any(String) }
     })
 
     expect(localStorage.setItem).toHaveBeenCalledWith(
@@ -61,14 +61,14 @@ describe('Testing auth actions', () => {
 
   test('should register a user correctly calling startRegister', async () => {
     fetchModule.fetchWithoutToken = jest.fn(() => ({
-      json() {
+      json () {
         return {
           ok: true,
           uid: 'some-uid',
           name: 'test-name',
-          token: 'some-token',
+          token: 'some-token'
         }
-      },
+      }
     }))
 
     await store.dispatch(startRegister('test@test.com', 'test', '123456'))
@@ -76,7 +76,7 @@ describe('Testing auth actions', () => {
 
     expect(actions[0]).toEqual({
       type: types.authLogin,
-      payload: { uid: 'some-uid', name: 'test-name' },
+      payload: { uid: 'some-uid', name: 'test-name' }
     })
 
     expect(localStorage.setItem).toHaveBeenCalledWith('token', 'some-token')
@@ -89,14 +89,14 @@ describe('Testing auth actions', () => {
 
   test('should checking correctly calling startChecking', async () => {
     fetchModule.fetchWithToken = jest.fn(() => ({
-      json() {
+      json () {
         return {
           ok: true,
           uid: 'some-uid',
           name: 'test-name',
-          token: 'some-token1',
+          token: 'some-token1'
         }
-      },
+      }
     }))
 
     await store.dispatch(startChecking())
@@ -105,7 +105,7 @@ describe('Testing auth actions', () => {
 
     expect(actions[0]).toEqual({
       type: types.authLogin,
-      payload: { uid: 'some-uid', name: 'test-name' },
+      payload: { uid: 'some-uid', name: 'test-name' }
     })
 
     expect(localStorage.setItem).toHaveBeenCalledWith('token', 'some-token1')

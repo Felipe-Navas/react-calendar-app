@@ -2,7 +2,7 @@ import { types } from '../types/types'
 
 const initialState = {
   events: [],
-  activeEvent: null,
+  activeEvent: null
 }
 
 export const calendarReducer = (state = initialState, action) => {
@@ -10,19 +10,19 @@ export const calendarReducer = (state = initialState, action) => {
     case types.eventSetActive:
       return {
         ...state,
-        activeEvent: action.payload,
+        activeEvent: action.payload
       }
 
     case types.eventAddNew:
       return {
         ...state,
-        events: [...state.events, action.payload],
+        events: [...state.events, action.payload]
       }
 
     case types.eventClearActiveEvent:
       return {
         ...state,
-        activeEvent: null,
+        activeEvent: null
       }
 
     case types.eventUpdated:
@@ -30,13 +30,13 @@ export const calendarReducer = (state = initialState, action) => {
         ...state,
         events: state.events.map((event) =>
           event.id === action.payload.id ? action.payload : event
-        ),
+        )
       }
 
     case types.eventLoaded:
       return {
         ...state,
-        events: [...action.payload],
+        events: [...action.payload]
       }
 
     case types.eventDeleted:
@@ -45,12 +45,12 @@ export const calendarReducer = (state = initialState, action) => {
         events: state.events.filter(
           (event) => event.id !== state.activeEvent.id
         ),
-        activeEvent: null,
+        activeEvent: null
       }
 
     case types.eventLogout:
       return {
-        ...initialState,
+        ...initialState
       }
     default:
       return state

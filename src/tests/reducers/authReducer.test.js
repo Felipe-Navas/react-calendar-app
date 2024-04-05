@@ -2,7 +2,7 @@ import { authReducer } from '../../reducers/authReducer'
 import { types } from '../../types/types'
 
 const initState = {
-  checking: true,
+  checking: true
 }
 
 describe('Testing the uiReducer', () => {
@@ -14,7 +14,7 @@ describe('Testing the uiReducer', () => {
   test('should login correctly', () => {
     const action = {
       type: types.authLogin,
-      payload: { uid: 'some-uid', name: 'test-name' },
+      payload: { uid: 'some-uid', name: 'test-name' }
     }
 
     const state = authReducer(initState, action)
@@ -22,7 +22,7 @@ describe('Testing the uiReducer', () => {
     expect(state).toEqual({
       uid: 'some-uid',
       name: 'test-name',
-      checking: false,
+      checking: false
     })
   })
 })

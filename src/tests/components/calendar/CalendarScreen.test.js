@@ -14,7 +14,7 @@ import { eventSetActive } from '../../../actions/events'
 
 jest.mock('../../../actions/events', () => ({
   eventSetActive: jest.fn(),
-  eventStartLoading: jest.fn(),
+  eventStartLoading: jest.fn()
 }))
 
 Storage.prototype.setItem = jest.fn()
@@ -24,15 +24,15 @@ const mockStore = configureStore(middlewares)
 
 const initState = {
   calendar: {
-    events: [],
+    events: []
   },
   auth: {
     uid: '123',
-    name: 'test',
+    name: 'test'
   },
   ui: {
-    modalOpen: false,
-  },
+    modalOpen: false
+  }
 }
 const store = mockStore(initState)
 store.dispatch = jest.fn()
@@ -56,7 +56,7 @@ describe('Testing the CalendarScreen component', () => {
 
     calendar.prop('onDoubleClickEvent')()
     expect(store.dispatch).toHaveBeenCalledWith({
-      type: types.uiOpenModal,
+      type: types.uiOpenModal
     })
 
     act(() => {

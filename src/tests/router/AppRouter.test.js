@@ -16,8 +16,8 @@ describe('Testing the AppRouter', () => {
   test('should render correctly', () => {
     const initState = {
       auth: {
-        checking: true,
-      },
+        checking: true
+      }
     }
     const store = mockStore(initState)
 
@@ -35,8 +35,8 @@ describe('Testing the AppRouter', () => {
     const initState = {
       auth: {
         checking: false,
-        uid: null,
-      },
+        uid: null
+      }
     }
     const store = mockStore(initState)
 
@@ -55,14 +55,14 @@ describe('Testing the AppRouter', () => {
       auth: {
         checking: false,
         uid: '123',
-        name: 'test-name',
+        name: 'test-name'
       },
       calendar: {
-        events: [],
+        events: []
       },
       ui: {
-        modalOpen: false,
-      },
+        modalOpen: false
+      }
     }
     const store = mockStore(initState)
 

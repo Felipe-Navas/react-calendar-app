@@ -12,7 +12,7 @@ import { uiOpenModal } from '../../actions/ui'
 import {
   eventClearActiveEvent,
   eventSetActive,
-  eventStartLoading,
+  eventStartLoading
 } from '../../actions/events'
 import { AddNewFab } from '../ui/AddNewFab'
 import { DeleteEventFab } from '../ui/DeleteEventFab'
@@ -57,10 +57,10 @@ export const CalendarScreen = () => {
       borderRadius: '0px',
       border: '0px',
       display: 'block',
-      opacity: 0.8,
+      opacity: 0.8
     }
     return {
-      style: style,
+      style
     }
   }
 
@@ -81,7 +81,7 @@ export const CalendarScreen = () => {
         onSelectSlot={onSelectSlot}
         selectable={true}
         components={{
-          event: CalendarEvent,
+          event: CalendarEvent
         }}
       />
 

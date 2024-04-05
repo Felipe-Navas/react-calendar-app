@@ -18,7 +18,7 @@ const expectedTypes = {
   authLogin: '[auth] Login',
   authStartRegister: '[auth] Start register',
   authStartTokenRenew: '[auth] Start token renew',
-  authLogout: '[auth] Logout',
+  authLogout: '[auth] Logout'
 }
 
 describe('Tests for types', () => {
