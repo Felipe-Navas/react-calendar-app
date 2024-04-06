@@ -64,7 +64,7 @@
   },
   "keywords": [],
   "author": "Felipe Navas",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Felipe-Navas/react-calendar-app/issues"
   },
